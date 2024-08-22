@@ -5,6 +5,7 @@ import InfoBox from "@/components/infoBox";
 import Section from "@/components/sections";
 import Image from "next/image";
 import useWindowWidth from "@/hooks/width";
+import Link from "next/link";
 
 export default function Home() {
   const width = useWindowWidth();
@@ -17,12 +18,13 @@ export default function Home() {
       <Image alt="hero image" src="/images/hero.png" width={"2000"} height={"2000"} priority/>
       <h1 className="text-[16px] ml-8 my-3 leading-tight">More than just a scanner app.<br/> Stay efficient, connected & practical.</h1>
       <p className="text-[12px] leading-tight ml-8 mb-3 w-[80%]">Bravo link is an all in one free scanner app that offers you multiple other features to help you stay efficient & connected to your team. It allows you to manage your scanned notes from the bravo notebooks as well as manage all your documents & save them in one place.</p>
-      <section className="bg-color-black w-full flex flex-col items-center px-3">
-        <p className="text-[12px] text-white mt-11 mb-2">Download our app now!</p>
-        <p className="text-[12px] text-white mb-11">It’s free!</p>
-        <div className="flex flex-col w-full items-center">
-          <GetApp title="for Android" image="/icons/google.png"/>
-          <GetApp title="for IOS" image="/icons/apple.png"/>
+      <section className="bg-color-black w-full flex flex-col items-center px-3 relative overflow-hidden">
+        <Image alt="graphical image" src={'/images/drawing.svg'} height={"2000"} width={"1000"} className="absolute h-[440px] w-auto"/>
+        <p className="text-[12px] text-white mt-11 mb-2 relative">Download our app now!</p>
+        <p className="text-[12px] text-white mb-11 relative">It’s free!</p>
+        <div className="flex flex-col w-full items-center relative">
+          <GetApp title="for Android" image="/icons/google.png" link="https://play.google.com/store/apps/details?id=com.mod.bravo"/>
+          <GetApp title="for IOS" image="/icons/apple.png" link="https://apps.apple.com/eg/app/bravo-link/id6479605225"/>
         </div>
       </section>
       <section className="flex flex-col items-center w-full">
@@ -53,7 +55,8 @@ export default function Home() {
         <h4 className="text-[16px] mt-10 font-bold">Why download Bravo Link?</h4>
         <p className="mb-5">Our main features</p>
       </section>
-      <section className="bg-[#EDEDED]">
+      <section className="bg-[#EDEDED] relative">
+        <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute h-[360px] w-auto"/>
         <Section 
           title="Sync calendars with your colleagues & teammates" 
           text="Bravo Link allows you to sync calendars, share & delegate tasks with your colleagues & teammates to track each others progress & work on team projects." 
@@ -69,7 +72,8 @@ export default function Home() {
           width="w-[308px]"
         />
       </section>
-      <section className="bg-[#EDEDED]">
+      <section className="bg-[#EDEDED] relative">
+        <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute h-[360px] w-auto"/>
         <Section 
           title="Create flashcards" 
           text="Our smart Bravo notebooks are designed to allow you to create flashcards from the notes already taken. You simply select the sentences you want to have in the flashcards , and our smart technology automatically creates the flashcard for you!" 
@@ -113,12 +117,12 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="flex justify-center w-[157px] bg-black mb-4 rounded-[2px]">
+            <Link href={'https://play.google.com/store/apps/details?id=com.mod.bravo '} target="_blank" rel="noopener noreferrer" className="flex justify-center w-[157px] bg-black mb-4 rounded-[2px]">
               <Image alt="logo" src={'/icons/google.png'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
-            </div>
-            <div className="flex justify-center w-[157px] bg-black rounded-[2px]">
+            </Link>
+            <Link href={'https://apps.apple.com/eg/app/bravo-link/id6479605225'} target="_blank" rel="noopener noreferrer" className="flex justify-center w-[157px] bg-black rounded-[2px]">
               <Image alt="logo" src={'/icons/apple.png'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
-            </div>
+            </Link>
           </div>
         </div>
       </footer>
