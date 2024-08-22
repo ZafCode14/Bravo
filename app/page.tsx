@@ -57,7 +57,7 @@ export default function Home() {
         <Section 
           title="Sync calendars with your colleagues & teammates" 
           text="Bravo Link allows you to sync calendars, share & delegate tasks with your colleagues & teammates to track each others progress & work on team projects." 
-          image="/images/group4.svg"
+          image="/images/group4.png"
           width="w-[329px]"
         />
       </section>
