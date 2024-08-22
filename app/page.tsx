@@ -114,10 +114,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col">
             <div className="flex justify-center w-[157px] bg-black mb-4 rounded-[2px]">
-              <Image alt="logo" src={'/icons/google.svg'} height={"100"} width={"100"} className="h-[27px] w-auto"/>
+              <Image alt="logo" src={'/icons/google.svg'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
             </div>
             <div className="flex justify-center w-[157px] bg-black rounded-[2px]">
-              <Image alt="logo" src={'/icons/apple.svg'} height={"100"} width={"100"} className="h-[27px] w-auto"/>
+              <Image alt="logo" src={'/icons/apple.svg'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
             </div>
           </div>
         </div>
