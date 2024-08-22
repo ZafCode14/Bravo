@@ -21,8 +21,8 @@ export default function Home() {
         <p className="text-[12px] text-white mt-11 mb-2">Download our app now!</p>
         <p className="text-[12px] text-white mb-11">It’s free!</p>
         <div className="flex flex-col w-full items-center">
-          <GetApp title="for Android" image="/icons/google.svg"/>
-          <GetApp title="for IOS" image="/icons/apple.svg"/>
+          <GetApp title="for Android" image="/icons/google.png"/>
+          <GetApp title="for IOS" image="/icons/apple.png"/>
         </div>
       </section>
       <section className="flex flex-col items-center w-full">
@@ -114,10 +114,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col">
             <div className="flex justify-center w-[157px] bg-black mb-4 rounded-[2px]">
-              <Image alt="logo" src={'/icons/google.svg'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
+              <Image alt="logo" src={'/icons/google.png'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
             </div>
             <div className="flex justify-center w-[157px] bg-black rounded-[2px]">
-              <Image alt="logo" src={'/icons/apple.svg'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
+              <Image alt="logo" src={'/icons/apple.png'} height={"2000"} width={"2000"} className="h-[27px] w-auto"/>
             </div>
           </div>
         </div>
