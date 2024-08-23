@@ -22,8 +22,6 @@ const useWindowHeight = () => {
     };
   }, []);
 
-  console.log(scrollPixels);
-
   return({ scrollPixels, scrollPercentage })
 };
 

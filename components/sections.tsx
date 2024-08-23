@@ -1,5 +1,6 @@
 import Image from "next/image";
 import useWindowHeight from "@/hooks/height";
+import SectionsNav from "./sectionsNav";
 
 interface sectionProp {
   title: string;
@@ -7,17 +8,40 @@ interface sectionProp {
   image: string;
   width: string;
   background: string;
+  section: number;
 }
 
-function Section({ title, text, image, width, background }: sectionProp) {
+function Section({ title, text, image, width, background, section }: sectionProp) {
   const height = useWindowHeight().scrollPixels;
 
   return (
-    <div className={`flex flex-col w-full items-center py-5 md:py-20 relative lg:h-[700px] lg: justify-center ${background}`}>
-      <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute h-[360px] md:h-full w-auto"/>
-      <p className="font-bold md:text-[24px]">{title}</p>
-      <p className="text-[10px] w-[329px] max-w-full text-center my-5 md:text-[16px] md:w-[600px]">{text}</p>
-      <Image alt="phone image" src={image} height={"2000"} width={"2000"} priority className={`${width} h-auto z-10`}/>
+    <div className={`flex flex-col w-full items-center py-5 md:py-10 relative lg:h-[800px] ${background}`}>
+      <div className="hidden lg:flex z-20 pb-10 justify-center">
+        <SectionsNav
+          title="Sync calendars with your colleagues & teammates"
+          opacity={section === 1 ? "opacity-100" : "opacity-50"}
+        />
+        <SectionsNav
+          title="Scan documents, notes & flashcards"
+          opacity={section === 2 ? "opacity-100" : "opacity-50"}
+        />
+        <SectionsNav
+          title="Create flashcards"
+          opacity={section === 3 ? "opacity-100" : "opacity-50"}
+        />
+        <SectionsNav
+          title="Send & receive all your files easily"
+          opacity={section === 4 ? "opacity-100" : "opacity-50"}
+        />
+      </div>
+      <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute w-full md:h-full h-auto"/>
+      <div className={`flex flex-col items-center xl:flex-row ${section % 2 === 0 && "xl:flex-row-reverse"} h-full z-20 relative`}>
+        <div className={`flex flex-col items-center xl:relative xl:items-start ${section === 1 && "top-[-120px] right-[20px]"} ${section === 2 && "top-[-100px]"} ${section === 3 && "right-[40px] top-[-100px]"} ${section === 4 && "left-[40px] top-[-70px]"}`}>
+          <p className="font-bold md:text-[20px]">{title}</p>
+          <p className="text-[10px] w-[329px] max-w-full text-center my-5 md:text-[16px] md:w-[600px] xl:text-left">{text}</p>
+        </div>
+        <Image alt="phone image" src={image} height={"2000"} width={"2000"} priority className={`${width} h-auto z-10`}/>
+      </div>
     </div>
   );
 }

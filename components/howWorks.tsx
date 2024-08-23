@@ -17,7 +17,7 @@ function HowWorks({ number, text, color, line }: howProp) {
             <p className="md:text-[16px] ml-7 h-[36px] w-[230px] lg:w-[300px] lg:text-center flex items-center leading-tight">{text}</p>
           </div>
         </div>
-        <div className={`w-[36px] md:w-[54px] lg:w-[120px] xl:w-[180px] 2xl:w-[240px] h-[64px] lg:h-[54px] md:h-[90px] ${line} justify-center lg:flex lg:items-center`}>
+        <div className={`w-[36px] md:w-[54px] lg:w-[110px] xl:w-[180px] 2xl:w-[240px] h-[64px] lg:h-[54px] md:h-[90px] ${line} justify-center lg:flex lg:items-center`}>
           <div className={`w-[1px] h-full lg:h-[1px] lg:w-full ${color}`}></div>
         </div>
       </div>
