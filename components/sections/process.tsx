@@ -8,9 +8,9 @@ function Process() {
   const width = useWindowWidth();
   const sectionHeight = 800 * 5;
 
+  const { scrollPixels } = useWindowHeight();
   const section1Ref = useRef<HTMLDivElement>(null);
   const [distance, setDistance] = useState<number>(0);
-  const { scrollPixels } = useWindowHeight();
 
   useEffect(() => {
     if (section1Ref.current) {
