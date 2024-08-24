@@ -9,9 +9,10 @@ interface sectionProp {
   width: string;
   background: string;
   section: number;
+  percent: number;
 }
 
-function Section({ title, text, image, width, background, section }: sectionProp) {
+function Section({ title, text, image, width, background, section, percent }: sectionProp) {
   const height = useWindowHeight().scrollPixels;
 
   return (
@@ -20,18 +21,26 @@ function Section({ title, text, image, width, background, section }: sectionProp
         <SectionsNav
           title="Sync calendars with your colleagues & teammates"
           opacity={section === 1 ? "opacity-100" : "opacity-50"}
+          percent={percent}
+          section={section}
         />
         <SectionsNav
           title="Scan documents, notes & flashcards"
           opacity={section === 2 ? "opacity-100" : "opacity-50"}
+          percent={percent - 100}
+          section={section}
         />
         <SectionsNav
           title="Create flashcards"
           opacity={section === 3 ? "opacity-100" : "opacity-50"}
+          percent={percent - 200}
+          section={section}
         />
         <SectionsNav
           title="Send & receive all your files easily"
           opacity={section === 4 ? "opacity-100" : "opacity-50"}
+          percent={percent - 300}
+          section={section}
         />
       </div>
       <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute w-full md:h-full h-auto"/>

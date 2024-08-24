@@ -24,6 +24,9 @@ function Process() {
   console.log(distance);
   console.log(height);
 
+  const m = 1 / 8;
+  const percent = m * (height - distance);
+
   return (
     <section className={`relative flex flex-col ${height >= distance + 3200 && "justify-end"}`} style={{
       height: width < 1024 ? "auto" : `${sectionHeight}px`
@@ -35,6 +38,7 @@ function Process() {
           width="w-[329px] md:w-[500px] lg:w-[550px]"
           background={`bg-[#EDEDED] ${height > distance && height < distance + 3200 ? "lg:fixed bottom-0 z-20" : `${height > distance + 2400 ? "lg:hidden" : "lg:relative"}`}`}
           section={1}
+          percent={percent}
         />
         <div ref={section1Ref} className="absolute top-[800px]"></div>
         <Section 
@@ -44,6 +48,7 @@ function Process() {
           width="w-[308px] md:w-[450px] lg:w-[550px]"
           background={`lg:bg-[#EDEDED] ${height > distance && height < distance + 3200 ? `${height < distance + 800 ? "lg:hidden" : "lg:fixed bottom-0 z-20"}` : "lg:hidden"}`}
           section={2}
+          percent={percent}
         />
         <Section 
           title="Create flashcards" 
@@ -52,6 +57,7 @@ function Process() {
           width="w-[329px] md:w-[430px]"
           background={`bg-[#EDEDED] ${height > distance && height < distance + 3200 ? `${height < distance + 1600 ? "lg:hidden" : "lg:fixed bottom-0 z-20"}` : "lg:hidden"}`}
           section={3}
+          percent={percent}
         />
         <Section 
           title="Send & receive all your files easily" 
@@ -60,6 +66,7 @@ function Process() {
           width="w-[219px] md:w-[350px] md:w-[450px]"
           background={`lg:bg-[#EDEDED] ${height > distance && height < distance + 3200 ? `${height < distance + 2400 ? "lg:hidden" : "lg:fixed bottom-0 z-20"}` : `relative`}`}
           section={4}
+          percent={percent}
         />
     </section>
   );

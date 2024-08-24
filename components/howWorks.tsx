@@ -3,9 +3,10 @@ interface howProp {
   text: string;
   color: string;
   line: string;
+  addClass: string;
 }
 
-function HowWorks({ number, text, color, line }: howProp) {
+function HowWorks({ number, text, color, line, addClass }: howProp) {
   return (
     <div className="self-start ml-[15%] lg:ml-0 max-w-[80vw]">
       <div className="flex flex-col lg:flex-row lg:items-center lg:h-[54px]">
@@ -14,7 +15,9 @@ function HowWorks({ number, text, color, line }: howProp) {
             <p className="text-white md:text-[16px]">{number}</p>
           </div>
           <div className={`lg:absolute ${Number(number) % 2 != 0 ? "lg:top-[60px]" : "lg:bottom-[60px]"} ${Number(number) === 3 && "lg:ml-[50px]"}`}>
-            <p className="md:text-[16px] ml-7 h-[36px] w-[230px] lg:w-[300px] lg:text-center flex items-center leading-tight">{text}</p>
+            <p className={`md:text-[16px] ml-7 h-[36px] w-[230px] lg:w-[300px] lg:text-center flex items-center leading-tight ${addClass}`} style={{
+              transition: ".4s ease"
+            }}>{text}</p>
           </div>
         </div>
         <div className={`w-[36px] md:w-[54px] lg:w-[110px] xl:w-[180px] 2xl:w-[240px] h-[64px] lg:h-[54px] md:h-[90px] ${line} justify-center lg:flex lg:items-center`}>
