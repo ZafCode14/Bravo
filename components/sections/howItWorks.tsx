@@ -19,10 +19,6 @@ function HowItWorks() {
     }
   }, [height]);
 
-  useEffect(() => {
-    console.log(height);
-  }, [height]);
-  
   const dist = distance + 200
 
   const m = (100 - 0) / (dist + 400 - dist);

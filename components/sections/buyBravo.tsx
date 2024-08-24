@@ -1,8 +1,40 @@
 import Image from "next/image";
 import useWindowWidth from "@/hooks/width";
+import { useState, useEffect } from "react";
 
 function BuyBravo() {
   const width = useWindowWidth();
+  const [string, setString] = useState("");
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const strings = ["scan", "take notes", "make flashcards"];
+
+  useEffect(() => {
+    if (subIndex === strings[index].length + 1 && !deleting) {
+      setTimeout(() => setDeleting(true), 1000); // Delay before starting to delete
+      return;
+    }
+
+    if (subIndex === 0 && deleting) {
+      setDeleting(false);
+      setIndex((prev) => (prev + 1) % strings.length); // Move to the next string
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (deleting ? -1 : 1));
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [subIndex, deleting]);
+
+  useEffect(() => {
+    setString(strings[index].substring(0, subIndex));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [subIndex]);
+
   return (
     <section className="flex flex-col items-center">
       <div className="relative h-[380px] w-full md:h-[600px] lg:h-[1100px]">
@@ -12,8 +44,9 @@ function BuyBravo() {
         absolute top-[80px] right-[220px] w-[133px] h-auto 
         md:w-[200px] md:top-[140px] md:right-[400px]
         lg:w-[400px] lg:right-[700px] lg:top-[200px]"/>
-        <div className="w-[327px] max-w-full h-[54px] bg-[#CADB4A] flex items-center absolute top-0 md:w-[500px] md:h-[90px] lg:w-[926px] lg:h-[152px]">
-          <p className="md:text-[20px] text-white ml-10 lg:text-[30px] lg:ml-32">Buy our Bravo Smart Notebook to scan</p>
+        <div className="w-[327px] max-w-full h-[54px] bg-[#CADB4A] flex items-center absolute top-0 md:w-[600px] md:h-[90px] lg:w-[926px] lg:h-[152px]">
+          <p className="md:text-[20px] text-white ml-10 lg:text-[30px] lg:ml-32">Buy our Bravo Smart Notebook to {string}</p>
+          <div className="bg-[white] w-[1px] h-16px ml-[2px] md:h-[51px] md:w-[2px]"></div>
         </div>
       </div>
       <p className="md:text-[30px] font-bold mb-3">They’re the perfect pair!</p>
