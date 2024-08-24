@@ -46,7 +46,7 @@ function BuyBravo() {
         lg:w-[400px] lg:right-[700px] lg:top-[200px]"/>
         <div className="w-[327px] max-w-full h-[54px] bg-[#CADB4A] flex items-center absolute top-0 md:w-[600px] md:h-[90px] lg:w-[926px] lg:h-[152px]">
           <p className="md:text-[20px] text-white ml-10 lg:text-[30px] lg:ml-32">Buy our Bravo Smart Notebook to {string}</p>
-          <div className="bg-[white] w-[1px] h-16px ml-[2px] md:h-[51px] md:w-[2px]"></div>
+          <div className="bg-[white] w-[1px] h-[16px] ml-[2px] md:h-[51px] md:w-[2px]"></div>
         </div>
       </div>
       <p className="md:text-[30px] font-bold mb-3">They’re the perfect pair!</p>
