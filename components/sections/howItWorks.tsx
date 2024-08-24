@@ -1,12 +1,17 @@
+import { useEffect } from "react";
 import HowWorks from "../howWorks";
 import InfoBox from "../infoBox";
 import useWindowHeight from "@/hooks/height";
 
 function HowItWorks() {
-  const height = useWindowHeight().scrollPercentage;
+  const height = useWindowHeight().scrollPixels;
 
-  const m = (100 - 0) / (9 - 5.5);
-  const x = m * (height - 5.5);
+  useEffect(() => {
+    console.log(height);
+  }, [height]);
+
+  const m = (100 - 0) / (1400 - 900);
+  const x = m * (height - 900);
 
 
   return (
