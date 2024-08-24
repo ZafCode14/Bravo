@@ -1,16 +1,9 @@
 import HowWorks from "../howWorks";
 import InfoBox from "../infoBox";
 import useWindowHeight from "@/hooks/height";
-import { useEffect } from "react";
 
 function HowItWorks() {
   const height = useWindowHeight().scrollPercentage;
-
-  useEffect(() => {
-    console.log(x);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [height])
-
 
   const m = (100 - 0) / (9 - 5.5);
   const x = m * (height - 5.5);

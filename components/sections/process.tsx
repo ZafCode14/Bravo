@@ -21,9 +21,6 @@ function Process() {
     }
   }, [scrollPixels]);
 
-  console.log(distance);
-  console.log(height);
-
   const m = 1 / 8;
   const percent = m * (height - distance);
 
