@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/icons/logo.svg"/>
+        <link rel="icon" href="https://i.ibb.co/k0kDVmD/logo-Black.png"/>
         <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet"/>
         <meta property="og:title" content="Bravo" />
         <meta property="og:description" content="Bravo link is an all in one free scanner app that offers you multiple other features to help you stay efficient & connected to your team. It allows you to manage your scanned notes from the bravo notebooks as well as manage all your documents & save them in one place." />
