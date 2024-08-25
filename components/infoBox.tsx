@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 function InfoBox() {
+  const t = useTranslations('HowItWorks');
   return (
     <div className="my-12 w-[300px] lg:w-[525px] lg:h-[154px] max-w-[95%] h-[70px] flex justify-center items-center  relative lg:mb-32 z-20">
       <div className="absolute w-full h-full bg-[#F69729] opacity-20">
@@ -11,7 +14,7 @@ function InfoBox() {
       <div className="w-[45px] h-[6px] lg:w-[81px] lg-h-[11px] bg-[#F69729] rounded-full absolute -bottom-[3px]"></div>
       <div className="w-[6px] h-[45px] lg:h-[81px] lg-w-[11px] bg-[#F69729] rounded-full absolute -left-[3px]"></div>
       <div className="w-[6px] h-[45px] lg:h-[81px] lg-w-[11px] bg-[#F69729] rounded-full absolute -right-[3px]"></div>
-      <p className="text-[12px] lg:text-[21px] px-5 leading-tight">Buy our notebook & start scanning, organizing & sharing all your notes & flashcards...</p>
+      <p className="text-[12px] lg:text-[21px] px-5 leading-tight">{t('box')}</p>
     </div>
   );
 }

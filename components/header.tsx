@@ -1,3 +1,4 @@
+"use client"
 import useWindowWidth from "@/hooks/width";
 import Image from "next/image";
 

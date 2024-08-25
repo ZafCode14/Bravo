@@ -1,0 +1,55 @@
+{
+  "Hero": {
+    "titlePart1": "More than just a scanner app.",
+    "titlePart2": "Stay efficient, connected & practical.",
+    "text": "Bravo link is an all in one free scanner app that offers you multiple other features to help you stay efficient & connected to your team. It allows you to manage your scanned notes from the bravo notebooks as well as manage all your documents & save them in one place."
+  },
+  "Download": {
+    "text1": "Download our app now!",
+    "text2": "It’s free!",
+    "forAndroid": "for Android",
+    "forIOS": "for IOS"
+  },
+  "HowItWorks": {
+    "title": "How it works?",
+    "step1": "Buy our notebook & download app.",
+    "step2": "Start writing notes in your notebook.",
+    "step3": "Scan your notes using our app.",
+    "step4": "Create your notebooks & organize your scanned notes!",
+    "step5": "Share your scanned notes & flashcards with you teammates & colleagues easily.",
+    "box": "Buy our notebook & start scanning, organizing & sharing all your notes & flashcards..."
+  },
+  "BuyBravo": {
+    "title": "Buy our Bravo Smart Notebook to",
+    "v1": "scan",
+    "v2": "take notes",
+    "v3": "make flashcards",
+    "subTitle": "They’re the perfect pair!",
+    "text1": "Our Bravo smart notebook was designed to work seamlessly with our bravo link application! Allowing you to digitalize the notebook & have it not only physically but digitally on your devices.",
+    "text2": "Camera detects our unique QR code for authentication of notebook",
+    "question": "Why download Bravo Link?",
+    "text3": "Our main features"
+  },
+  "Process": {
+    "title1": "Sync calendars with your colleagues & teammates",
+    "text1": "Bravo Link allows you to sync calendars, share & delegate tasks with your colleagues & teammates to track each others progress & work on team projects.",
+    "title2": "Scan documents, notes & flashcards",
+    "text2": "Using advanced scanning technology, our scanner camera scan your written notes in the highest quality and allows you to not only save it as notes but also create flashcards! For ease of use, you are allowed to create digital notebooks to save & sort your scanned notes & flashcards in.",
+    "title3": "Create flashcards",
+    "text3": "Our smart Bravo notebooks are designed to allow you to create flashcards from the notes already taken. You simply select the sentences you want to have in the flashcards , and our smart technology automatically creates the flashcard for you!",
+    "title4": "Send & receive all your files easily",
+    "text4": "Share all your scanned notes, documents & flashcards internally with Bravo Link handle, which is a unique ID for each user."
+  },
+  "Video": {
+    "title": "Simple, efiecient & quick",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "Textbooks": {
+    "title": "Buy our smart notebook to enjoy our app!",
+    "button": "Shop now"
+  },
+  "Footer": {
+    "follow": "Follow Us",
+    "text": "Download our app & enjoy the new experience"
+  }
+}

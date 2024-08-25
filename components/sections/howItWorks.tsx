@@ -3,12 +3,14 @@ import HowWorks from "../howWorks";
 import InfoBox from "../infoBox";
 import useWindowHeight from "@/hooks/height";
 import useWindowWidth from "@/hooks/width";
+import { useTranslations } from "next-intl";
 
 function HowItWorks() {
   const height = useWindowHeight().scrollPixels;
   const width = useWindowWidth();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [distance, setDistance] = useState<number>(0);
+  const t = useTranslations('HowItWorks');
 
   useEffect(() => {
     if (sectionRef.current) {
@@ -27,41 +29,41 @@ function HowItWorks() {
 
   return (
     <section className="relative flex flex-col items-center w-full overflow-hidden">
-      <p className="my-8 font-bold md:text-[22px]">How it works?</p>
+      <p className="my-8 font-bold md:text-[22px]">{t('title')}</p>
       <div className="flex flex-col items-center w-full mb-[30px] lg:flex-row lg:justify-center lg:my-[110px]">
         <div ref={sectionRef}></div>
         <HowWorks 
           color="bg-[#F69729]" 
           number="1" 
-          text="Buy our notebook & download app." 
+          text={t('step1')}
           line="flex"
           addClass={x > 14 ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#CADB4A]" 
           number="2" 
-          text="Start writing notes in your notebook." 
+          text={t('step2')}
           line="flex"
           addClass={x > 32 ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#FD67BE]" 
           number="3" 
-          text="Scan your notes using our app." 
+          text={t('step3')} 
           line="flex"
           addClass={x > 50 ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#3F86A4]" 
           number="4" 
-          text="Create your notebooks & organize your scanned notes!" 
+          text={t('step4')} 
           line="flex"
           addClass={x > 67 ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#F69729]" 
           number="5" 
-          text="Share your scanned notes & flashcards with you teammates & colleagues easily." 
+          text={t('step5')}
           line="hidden lg:hidden"
           addClass={x > 85 ? "opacity-100" : "opacity-0"}
         />
