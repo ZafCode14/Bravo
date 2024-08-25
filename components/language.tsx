@@ -9,6 +9,7 @@ function Language() {
   const router = useRouter();
   const pathname = usePathname();
 
+  console.log(pathname);
   useEffect(() => {
     // Check if the Language component has been shown before
     // localStorage.clear();
@@ -29,13 +30,12 @@ function Language() {
   }, [height])
 
   const handleLanguageChange = (lang: string) => {
-    // Update the URL with the new locale
-    const newUrl = new URL(window.location.href);
-    newUrl.pathname = pathname;
-    newUrl.searchParams.set('locale', lang);
-
-    router.push(newUrl.toString());
+    // Construct the new pathname with the selected language
+    const newPathname = `/${lang}`;
     setIsFirstLoad(false);
+    
+    // Update the URL with the new locale
+    router.replace(newPathname);
   };
 
 
@@ -44,7 +44,7 @@ function Language() {
   }
 
   return (
-    <div className="w-full h-screen bg-black/50 fixed z-30 backdrop-blur-sm flex items-center justify-center">
+    <div className={"w-full h-screen bg-black/50 fixed z-30 backdrop-blur-sm flex items-center justify-center"}>
       <div className="bg-white p-6 md:p-10 rounded-lg text-center w-[600px] max-w-[90%] md:text-[20px] flex flex-col items-center justify-center">
         <p className="mb-4 md:text-[20px]">Please choose your preferred language</p>
         <p className="mb-4 md:text-[20px]">اختر اللغة اللتي تريدها</p>
