@@ -2,9 +2,11 @@ import Image from "next/image";
 import useWindowWidth from "@/hooks/width";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 function BuyBravo() {
   const t = useTranslations('BuyBravo');
+  const p = usePathname();
   const width = useWindowWidth();
   const [string, setString] = useState("");
   const [index, setIndex] = useState(0);
@@ -46,9 +48,9 @@ function BuyBravo() {
         absolute top-[80px] right-[220px] w-[133px] h-auto 
         md:w-[200px] md:top-[140px] md:right-[400px]
         lg:w-[400px] lg:right-[700px] lg:top-[200px]"/>
-        <div className="w-[327px] max-w-full h-[54px] bg-[#CADB4A] flex items-center absolute top-0 md:w-[600px] md:h-[90px] lg:w-[926px] lg:h-[152px]">
-          <p className="md:text-[20px] text-white ml-10 lg:text-[30px] lg:ml-32">{t('title')} {string}</p>
-          <div className="bg-[white] w-[1px] h-[16px] ml-[2px] md:h-[51px] md:w-[2px]"></div>
+        <div className={`${p === '/ar' && "text-right flex-row-reverse"} w-[327px] max-w-full h-[54px] bg-[#CADB4A] flex items-center absolute top-0 md:w-[600px] md:h-[90px] lg:w-[926px] lg:h-[152px]`}>
+          <p className={`${p === '/ar' ? "mr-10" : "ml-10 lg:ml-32"} md:text-[20px] text-white lg:text-[30px]`}>{t('title')} {string}</p>
+          <div className={`bg-[white] w-[1px] h-[16px] ${p === '/' ? "ml-[2px]" : "mr-[2px]"} md:h-[51px] md:w-[2px]`}></div>
         </div>
       </div>
       <p className="md:text-[30px] font-bold mb-3">{t('subTitle')}</p>

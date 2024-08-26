@@ -1,9 +1,12 @@
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 function InfoBox() {
+  const p = usePathname();
   const t = useTranslations('HowItWorks');
+
   return (
-    <div className="my-12 w-[300px] lg:w-[525px] lg:h-[154px] max-w-[95%] h-[70px] flex justify-center items-center  relative lg:mb-32 z-20">
+    <div className={`${p === '/ar' && 'text-right'} my-12 w-[300px] lg:w-[525px] lg:h-[154px] max-w-[95%] h-[70px] flex justify-center items-center  relative lg:mb-32 z-20`}>
       <div className="absolute w-full h-full bg-[#F69729] opacity-20">
       </div>
       <div className="w-[15px] h-[15px] lg:w-[27px] lg:h-[27px] lg:-top-[13.5px] lg:-left-[13.5px] bg-[#F69729] rounded-full absolute -top-[7.5px] -left-[7.5px]"></div>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import useWindowHeight from "@/hooks/height";
 import SectionsNav from "./sectionsNav";
 import { useTranslations } from "next-intl";
 
@@ -14,7 +13,6 @@ interface sectionProp {
 }
 
 function Section({ title, text, image, width, background, section, percent }: sectionProp) {
-  const height = useWindowHeight().scrollPixels;
   const t = useTranslations('Process');
 
   return (
@@ -24,25 +22,21 @@ function Section({ title, text, image, width, background, section, percent }: se
           title={t('title1')}
           opacity={section === 1 ? "opacity-100" : "opacity-50"}
           percent={percent}
-          section={section}
         />
         <SectionsNav
           title={t('title2')}
           opacity={section === 2 ? "opacity-100" : "opacity-50"}
           percent={percent - 100}
-          section={section}
         />
         <SectionsNav
           title={t('title3')}
           opacity={section === 3 ? "opacity-100" : "opacity-50"}
           percent={percent - 200}
-          section={section}
         />
         <SectionsNav
           title={t('title4')}
           opacity={section === 4 ? "opacity-100" : "opacity-50"}
           percent={percent - 300}
-          section={section}
         />
       </div>
       <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute w-full md:h-full h-auto"/>

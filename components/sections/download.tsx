@@ -10,7 +10,7 @@ function Download() {
   const t = useTranslations('Download');
   return (
     <section className="bg-color-black w-full flex flex-col items-center justify-center sm:px-8 md:px-3 relative overflow-hidden md:pt-20 md:pb-40 z-20">
-      <Image property="" alt="graphical image" src={'/images/drawing.svg'} height={"2000"} width={"1000"} className={width > 1250 ? `absolute right-0 bottom-0` : `absolute h-full w-auto md:bottom-[-20px]`} style={{
+      <Image property="" alt="graphical image" src={'/images/drawing.svg'} height={"2000"} width={"1000"} priority className={width > 1250 ? `absolute right-0 bottom-0` : `absolute h-full w-auto md:bottom-[-20px]`} style={{
         width: width > 1250 && height < 800 ? `calc(200px + ${height / 2}px)` : "none"
       }}/>
       <Image alt="graphical image" src={'/images/drawing.svg'} height={"2000"} width={"1000"} className={width > 1250 ? `absolute rotate-180 left-0 top-0` : `hidden`} style={{

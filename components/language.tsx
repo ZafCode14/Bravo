@@ -1,15 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import useWindowHeight from "@/hooks/height";
 
 function Language() {
   const [isFirstLoad, setIsFirstLoad] = useState(false);
   const height = useWindowHeight();
   const router = useRouter();
-  const pathname = usePathname();
 
-  console.log(pathname);
   useEffect(() => {
     // Check if the Language component has been shown before
     // localStorage.clear();

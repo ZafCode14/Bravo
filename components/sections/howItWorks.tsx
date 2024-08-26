@@ -4,6 +4,7 @@ import InfoBox from "../infoBox";
 import useWindowHeight from "@/hooks/height";
 import useWindowWidth from "@/hooks/width";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 function HowItWorks() {
   const height = useWindowHeight().scrollPixels;
@@ -11,6 +12,7 @@ function HowItWorks() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [distance, setDistance] = useState<number>(0);
   const t = useTranslations('HowItWorks');
+  const p = usePathname();
 
   useEffect(() => {
     if (sectionRef.current) {
@@ -68,7 +70,7 @@ function HowItWorks() {
           addClass={x > 85 ? "opacity-100" : "opacity-0"}
         />
       </div>
-      <div className="h-[580px] w-[50px] md:w-[60px] md:h-[790px] left-[15%] lg:left-0 flex flex-col lg:flex-row justify-end absolute lg:w-full lg:h-[60px] lg:top-[205px]">
+      <div className={`h-[580px] w-[50px] ${p === "/" ? "left-[15%]" : "right-[15%]"} justify-end absolute md:w-[60px] md:h-[790px] lg:left-0 flex flex-col lg:flex-row lg:w-full lg:h-[60px] lg:top-[205px]`}>
         <div className="lg:h-full w-full bg-white opacity-60" style={width >= 1024 ? {
           width: 100 - x > 0 && 100 - x < 100 ? `${100 - x}%` : `${100 - x < 100 ? "0" : "100"}%`
         } : {

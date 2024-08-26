@@ -2,9 +2,8 @@ interface secNavProp {
   title: string;
   opacity: string;
   percent: number;
-  section: number;
 }
-function SectionsNav({ title, opacity, percent, section }: secNavProp) {
+function SectionsNav({ title, opacity, percent }: secNavProp) {
   return (
     <div className={`flex w-full flex-col items-center md:mx-1 xl:mx-2 ${opacity}`}>
       <p className="text-[10px] xl:text-[12px] font-bold mb-2">{title}</p>
