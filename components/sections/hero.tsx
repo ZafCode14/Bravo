@@ -8,7 +8,6 @@ function Hero() {
   const width = useWindowWidth();
   const t = useTranslations('Hero');
 
-  console.log(pathname);
   return (
     <section className={`max-w-[100%] flex flex-col items-center relative ${pathname === "/ar" && "text-right"}`}>
       <Image alt="hero image" src="/images/hero.png" width={"2000"} height={"2000"} priority/>
