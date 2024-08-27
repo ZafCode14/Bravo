@@ -9,7 +9,7 @@ function Process() {
   const width = useWindowWidth();
 
   const section1Ref = useRef<HTMLDivElement>(null);
-  const [sectionNumber, setSectionNumber] = useState(4);
+  const [sectionNumber, setSectionNumber] = useState(1);
 
   const handleNext = () => {
     setSectionNumber(prev => {
