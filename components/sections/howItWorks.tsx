@@ -28,6 +28,11 @@ function HowItWorks() {
   const m = (100 - 0) / (dist + 400 - dist);
   const x = m * (height - dist);
 
+  const a = p === '/' ? 14 : 85
+  const b = p === '/' ? 32 : 67
+  const c = p === '/' ? 50 : 50
+  const d = p === '/' ? 67 : 32
+  const e = p === '/' ? 85 : 14
 
   return (
     <section className="relative flex flex-col items-center w-full overflow-hidden">
@@ -36,41 +41,46 @@ function HowItWorks() {
         <div ref={sectionRef}></div>
         <HowWorks 
           color="bg-[#F69729]" 
-          number="1" 
-          text={t('step1')}
+          number={p === '/ar' && width >= 1024 ? "5" : "1"}
+          text={p === '/ar' && width >= 1024 ? t('step5') : t('step1')}
           line="flex"
-          addClass={x > 14 ? "opacity-100" : "opacity-0"}
+          addClass={x > a ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#CADB4A]" 
-          number="2" 
-          text={t('step2')}
+          number={p === '/ar' && width >= 1024 ? "4" : "2"}
+          text={p === '/ar' && width >= 1024 ? t('step4') : t('step2')}
           line="flex"
-          addClass={x > 32 ? "opacity-100" : "opacity-0"}
+          addClass={x > b ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#FD67BE]" 
           number="3" 
           text={t('step3')} 
           line="flex"
-          addClass={x > 50 ? "opacity-100" : "opacity-0"}
+          addClass={x > c ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#3F86A4]" 
-          number="4" 
-          text={t('step4')} 
+          number={p === '/ar' && width >= 1024 ? "2" : "4"}
+          text={p === '/ar' && width >= 1024 ? t('step2') : t('step4')}
           line="flex"
-          addClass={x > 67 ? "opacity-100" : "opacity-0"}
+          addClass={x > d ? "opacity-100" : "opacity-0"}
         />
         <HowWorks 
           color="bg-[#F69729]" 
-          number="5" 
-          text={t('step5')}
+          number={p === '/ar' && width >= 1024 ? "1" : "5"}
+          text={p === '/ar' && width >= 1024 ? t('step1') : t('step5')}
           line="hidden lg:hidden"
-          addClass={x > 85 ? "opacity-100" : "opacity-0"}
+          addClass={x > e ? "opacity-100" : "opacity-0"}
         />
       </div>
-      <div className={`h-[580px] w-[50px] ${p === "/" ? "left-[15%]" : "right-[15%]"} justify-end absolute md:w-[60px] md:h-[790px] lg:left-0 flex flex-col lg:flex-row lg:w-full lg:h-[60px] lg:top-[205px]`}>
+      <div className={`
+        absolute
+        lg:left-0 lg:top-[205px] ${p === "/" ? "left-[15%]" : "right-[15%]"}
+        flex flex-col justify-end lg:flex-row ${p === '/ar' && "lg:justify-start"}
+        h-[580px] w-[50px] md:w-[60px] md:h-[790px] lg:w-full lg:h-[60px]
+      `}>
         <div className="lg:h-full w-full bg-white opacity-60" style={width >= 1024 ? {
           width: 100 - x > 0 && 100 - x < 100 ? `${100 - x}%` : `${100 - x < 100 ? "0" : "100"}%`
         } : {
