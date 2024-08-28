@@ -63,26 +63,26 @@ function Process() {
           section={4}
         />
         <div className={`
-          absolute bottom-0 
-          hidden lg:flex justify-center
-          w-full mb-14 z-30
+          absolute bottom-[250px] 
+          hidden self-center lg:flex justify-between
+          w-[90%] mb-14 z-30
         `}>
-          <button className="h-[30px] mx-[15%] font-bold" onClick={handlePrev}>
+          <button className="h-[65px] font-bold" onClick={handlePrev}>
             <Image
-              src={"/icons/Arrow.svg"}
+              src={"/icons/arrow.svg"}
               alt={"arrow"}
               width={100}
               height={100}
-              className="w-full h-full rotate-180 scale-x-[200%]"
+              className="w-full h-full"
             />
           </button>
-          <button className="h-[30px] mx-[15%]" onClick={handleNext}>
+          <button className="h-[65px]" onClick={handleNext}>
             <Image
-              src={"/icons/Arrow.svg"}
+              src={"/icons/arrow.svg"}
               alt={"arrow"}
               width={100}
               height={100}
-              className="w-full h-full scale-x-[200%]"
+              className="w-full h-full rotate-180"
             />
           </button>
         </div>
