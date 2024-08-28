@@ -28,11 +28,11 @@ function HowItWorks() {
   const m = (100 - 0) / (dist + 400 - dist);
   const x = m * (height - dist);
 
-  const a = p === '/' ? 14 : 85
-  const b = p === '/' ? 32 : 67
-  const c = p === '/' ? 50 : 50
-  const d = p === '/' ? 67 : 32
-  const e = p === '/' ? 85 : 14
+  const a = p === '/ar' && width >= 1024 ? 85 : 14
+  const b = p === '/ar' && width >= 1024 ? 67 : 32
+  const c = p === '/ar' && width >= 1024 ? 50 : 50
+  const d = p === '/ar' && width >= 1024 ? 32 : 67
+  const e = p === '/ar' && width >= 1024 ? 14 : 85
 
   return (
     <section className="relative flex flex-col items-center w-full overflow-hidden">
