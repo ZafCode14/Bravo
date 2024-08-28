@@ -16,7 +16,6 @@ function Section({ title, text, image, width, background, section }: sectionProp
   const t = useTranslations('Process');
   const p = usePathname();
 
-  console.log('Section:', section);
   return (
     <div className={`
     relative lg:absolute
