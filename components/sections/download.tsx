@@ -13,7 +13,7 @@ function Download() {
       <Image property="" alt="graphical image" src={'/images/drawing.svg'} height={"2000"} width={"1000"} priority className={width > 1250 ? `absolute right-0 bottom-0` : `absolute h-full w-auto md:bottom-[-20px]`} style={{
         width: width > 1250 && height < 800 ? `calc(200px + ${height / 2}px)` : "none"
       }}/>
-      <Image alt="graphical image" src={'/images/drawing.svg'} height={"2000"} width={"1000"} className={width > 1250 ? `absolute rotate-180 left-0 top-0` : `hidden`} style={{
+      <Image alt="graphical image" src={'/images/drawing.svg'} height={"2000"} width={"1000"} priority className={width > 1250 ? `absolute rotate-180 left-0 top-0` : `hidden`} style={{
         width: width > 1250 && height < 800 ? `calc(200px + ${height / 2}px)` : "none"
       }}/>
       <p className="md:text-[26px] text-white mt-11 mb-2 relative">{t('text1')}</p>

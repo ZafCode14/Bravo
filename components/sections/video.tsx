@@ -7,7 +7,7 @@ function Video() {
   const p = usePathname();
 
   return (
-    <section className={`bg-color-black relative w-full flex justify-center items-center py-10 lg:py-40 lg:overflow-hidden ${p === '/ar' && "text-right"}`}>
+    <section className={`bg-color-black relative w-full flex justify-center items-center py-10 lg:py-40 overflow-hidden ${p === '/ar' && "text-right"}`}>
       <Image alt="textbook image" src={'/images/wigly1.svg'} height={"2000"} width={"1000"} className="absolute top-[-110px] left-0 w-[181px] h-auto max-w-full lg:w-[250px]"/>
       <Image alt="textbook image" src={'/images/wigly2.svg'} height={"2000"} width={"1000"} className="absolute bottom-[-55px] right-0 w-[166px] h-auto max-w-full lg:w-[250px]"/>
       <div className="flex z-10 items-center justify-center w-full relative">

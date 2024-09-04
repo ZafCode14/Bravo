@@ -34,7 +34,7 @@ function Process() {
           text={t('text1')}
           image={width < 1024 ? "/images/group4.png" : "/images/group4L.png"}
           width="w-[329px] md:w-[500px] lg:w-[550px]"
-          background={`bg-[#EDEDED] ${sectionNumber !== 1 && "hidden"}`}
+          background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 1 && "hidden"}`}
           section={1}
         />
         <div ref={section1Ref} className="absolute top-[800px]"></div>
@@ -43,7 +43,7 @@ function Process() {
           text={t('text2')}
           image="/images/photo6.png"
           width="w-[308px] md:w-[450px] lg:w-[550px]"
-          background={`lg:bg-[#EDEDED] ${sectionNumber !== 2 && "hidden"}`}
+          background={`lg:bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 2 && "hidden"}`}
           section={2}
         />
         <Section 
@@ -51,7 +51,7 @@ function Process() {
           text={t('text3')}
           image={width < 1024 ? "/images/photo7.png" : "/images/photo7L.png"}
           width="w-[329px] md:w-[430px]"
-          background={`bg-[#EDEDED] ${sectionNumber !== 3 && "hidden"}`}
+          background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 3 && "hidden"}`}
           section={3}
         />
         <Section 
@@ -59,7 +59,7 @@ function Process() {
           text={t('text4')}
           image="/images/photo8.png"
           width="w-[219px] md:w-[350px] md:w-[450px]"
-          background={`lg:bg-[#EDEDED] ${sectionNumber !== 4 && "hidden"}`}
+          background={`lg:bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 4 && "hidden"}`}
           section={4}
         />
         <div className={`
