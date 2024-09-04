@@ -3,9 +3,11 @@ import useWindowWidth from "@/hooks/width";
 import { useRef, useState } from 'react';
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 function Process() {
   const t = useTranslations('Process');
+  const p = usePathname();
   const width = useWindowWidth();
 
   const section1Ref = useRef<HTMLDivElement>(null);
@@ -32,7 +34,7 @@ function Process() {
         <Section 
           title={t('title1')} 
           text={t('text1')}
-          image={width < 1024 ? "/images/group4.png" : "/images/group4L.png"}
+          image={p === '/' ? `${width < 1024 ? "/images/group4.png" : "/images/group4L.png"}` : "/images/ar_group4.png"}
           width="w-[329px] md:w-[500px] lg:w-[550px]"
           background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 1 && "hidden"}`}
           section={1}
@@ -41,7 +43,7 @@ function Process() {
         <Section 
           title={t('title2')} 
           text={t('text2')}
-          image="/images/photo6.png"
+          image={p === "/" ? "/images/photo6.png" : "/images/ar_photo6.png"}
           width="w-[308px] md:w-[450px] lg:w-[550px]"
           background={`lg:bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 2 && "hidden"}`}
           section={2}
@@ -49,15 +51,15 @@ function Process() {
         <Section 
           title={t('title3')} 
           text={t('text3')}
-          image={width < 1024 ? "/images/photo7.png" : "/images/photo7L.png"}
-          width="w-[329px] md:w-[430px]"
+          image={p === "/" ? `${width < 1024 ? "/images/photo7.png" : "/images/photo7L.png"}` : "/images/ar_photo7.png"}
+          width={`${p === "/" ? "w-[329px]" : "w-[270px]"} md:w-[430px]`}
           background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 3 && "hidden"}`}
           section={3}
         />
         <Section 
           title={t('title4')} 
           text={t('text4')}
-          image="/images/photo8.png"
+          image={p === "/" ? "/images/photo8.png" : "/images/ar_photo8.png"}
           width="w-[219px] md:w-[350px] md:w-[450px]"
           background={`lg:bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 4 && "hidden"}`}
           section={4}
