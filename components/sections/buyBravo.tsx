@@ -44,7 +44,7 @@ function BuyBravo() {
       <div className="relative h-[380px] w-full md:h-[600px] lg:h-[1100px]">
         <Image alt="graphical element" src={'/images/graphicalElGreen.svg'} height={"2000"} width={"1000"} className={width >= 768 ? "md:absolute md:top-[0] md:left-0 md:h-auto md:w-[600px] lg:w-[1200px]" : "hidden"}/>
         <Image alt="textbook image" src={'/images/textbook.jpg'} height={"2000"} width={"1000"} className="absolute top-[0] right-0 w-[285px] h-auto md:w-[500px] lg:w-[800px]"/>
-        <Image alt="phone image" src={'/images/phone1.png'} height={"2000"} width={"1000"} className="
+        <Image alt="phone image" src={p === '/' ? '/images/phone1.png' : '/images/ar_phone1.png'} height={"2000"} width={"1000"} className="
         absolute top-[80px] right-[220px] w-[133px] h-auto 
         md:w-[200px] md:top-[140px] md:right-[400px]
         lg:w-[400px] lg:right-[700px] lg:top-[200px]"/>
@@ -58,7 +58,7 @@ function BuyBravo() {
       <div className="relative w-full h-[380px] md:h-[600px] overflow-hidden lg:h-[1150px]">
         <Image alt="textbook image" src={'/images/graphicalElGreen.svg'} height={"2000"} width={"1000"} className={width >= 768 ? "md:absolute md:top-[0] md:right-[-100px] md:h-auto md:w-[600px] lg:w-[1200px] lg:right-[-250px]" : "hidden"}/>
         <Image alt="textbook image" src={'/images/textbook.jpg'} height={"2000"} width={"1000"} className="absolute top-0 left-0 w-[285px] h-auto md:w-[500px] lg:w-[920px]"/>
-        <Image alt="phone image" src={'/images/phone2.png'} height={"2000"} width={"1000"} className="absolute top-[80px] left-[240px] w-[133px] h-auto md:w-[240px] md:left-[400px] md:top-[140px] lg:w-[470px] lg:top-[250px] lg:left-[750px]"/>
+        <Image alt="phone image" src={p === '/' ? '/images/phone2.png' : '/images/ar_phone2.png'} height={"2000"} width={"1000"} className="absolute top-[80px] left-[240px] w-[133px] h-auto md:w-[240px] md:left-[400px] md:top-[140px] lg:w-[470px] lg:top-[250px] lg:left-[750px]"/>
         <Image alt="arrow" src={'/images/curlyarrow.svg'} height={"2000"} width={"1000"} className="absolute top-[290px] left-[30px] w-[84px] h-auto md:top-[500px] md:left-[180px] lg:w-[160px] lg:top-[950px]"/>
       </div>
       <p className="text-[12px] w-[308px] max-w-full text-center md:text-[20px] md:w-[514px] lg:self-start lg:ml-[20%] lg:mb-[80px]">{t('text2')}</p>
