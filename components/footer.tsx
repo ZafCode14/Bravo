@@ -14,13 +14,16 @@ function Footer() {
       <div className="flex justify-between w-full px-8">
         <div className="flex flex-col">
           <p className="text-[10px] mb-3 tracking-[3px] md:text-[14px]">{t('follow')}</p>
-          <div className="flex mb-2">
-            <Image alt="logo" src={'/icons/instagram.svg'} height={"100"} width={"100"} className="w-[16px] h-auto mr-2"/>
-            <p className="text-[10px] tracking-[3px] md:text-[12px]">Bravo@eg</p>
-          </div>
           <div className="flex">
-            <Image alt="logo" src={'/icons/facebook.svg'} height={"100"} width={"100"} className="w-[16px] h-auto mr-2"/>
-            <p className="text-[10px] tracking-[3px] md:text-[12px]">Bravo@eg</p>
+            <Link href={'https://www.instagram.com/bravo.egypt?igsh=MXBvYWk4amo1cDFpZg=='} target="_blank" rel="noopener noreferrer">
+              <Image alt="logo" src={'/icons/instagram.svg'} height={"100"} width={"100"} className="w-[20px] md:w-[30px] h-auto mr-2"/>
+            </Link>
+            <Link href={'https://www.facebook.com/share/LfxySURxZGLL3vaF/?mibextid=LQQJ4d'} target="_blank" rel="noopener noreferrer">
+              <Image alt="logo" src={'/icons/facebook.svg'} height={"100"} width={"100"} className="w-[20px] md:w-[30px] h-auto mr-2"/>
+            </Link>
+            <Link href={'https://www.tiktok.com/@bravo.egypt?_t=8pTLY8I2cgy&_r=1'} target="_blank" rel="noopener noreferrer">
+              <Image alt="logo" src={'/icons/tiktok.svg'} height={"100"} width={"100"} className="w-[20px] md:w-[30px] h-auto mr-2"/>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-center">
