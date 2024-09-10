@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 function Process() {
   const t = useTranslations('Process');
+  const t1 = useTranslations('BuyBravo')
   const p = usePathname();
   const width = useWindowWidth();
 
@@ -31,6 +32,10 @@ function Process() {
     <section className={`relative flex flex-col`} style={{
       height: width < 1024 ? "auto" : `800px`
     }}>
+      <div className={ width < 1024 ? "flex flex-col items-center" : "hidden"}>
+        <h4 className="text-[16px] mt-10 font-bold md:text-[30px]">{t1('question')}</h4>
+        <p className="mb-5 md:text-[24px]">{t1('text3')}</p>
+      </div>
         <Section 
           title={t('title1')} 
           text={t('text1')}

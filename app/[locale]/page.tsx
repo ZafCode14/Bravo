@@ -6,6 +6,7 @@ import BuyBravo from "@/components/sections/buyBravo";
 import Process from "@/components/sections/process";
 import Video from "@/components/sections/video";
 import Notebooks from "@/components/sections/notebooks";
+import Ai from "@/components/sections/ai";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Download/>
       <HowItWorks/>
       <BuyBravo/>
+      <Ai/>
       <Process/>
       <Video/>
       <Notebooks/>

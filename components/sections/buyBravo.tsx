@@ -61,11 +61,7 @@ function BuyBravo() {
         <Image alt="phone image" src={p === '/' ? '/images/phone2.png' : '/images/ar_phone2.png'} height={"2000"} width={"1000"} className="absolute top-[80px] left-[240px] w-[133px] h-auto md:w-[240px] md:left-[400px] md:top-[140px] lg:w-[470px] lg:top-[250px] lg:left-[750px]"/>
         <Image alt="arrow" src={'/images/curlyarrow.svg'} height={"2000"} width={"1000"} className="absolute top-[290px] left-[30px] w-[84px] h-auto md:top-[500px] md:left-[180px] lg:w-[160px] lg:top-[950px]"/>
       </div>
-      <p className="text-[12px] w-[308px] max-w-full text-center md:text-[20px] md:w-[514px] lg:self-start lg:ml-[20%] lg:mb-[80px]">{t('text2')}</p>
-      <div className={ width < 1024 ? "flex flex-col items-center" : "hidden"}>
-        <h4 className="text-[16px] mt-10 font-bold md:text-[30px]">{t('question')}</h4>
-        <p className="mb-5 md:text-[24px]">{t('text3')}</p>
-      </div>
+      <p className="text-[12px] w-[308px] max-w-full text-center md:text-[20px] md:w-[514px] lg:self-start lg:ml-[20%] lg:mb-[80px] mb-10">{t('text2')}</p>
     </section>
   );
 }
