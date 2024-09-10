@@ -40,6 +40,10 @@ function Section({ title, text, image, width, background, section }: sectionProp
           title={t('title4')}
           opacity={section === 4 ? "opacity-100" : "opacity-50"}
         />
+        <SectionsNav
+          title={t('title5')}
+          opacity={section === 5 ? "opacity-100" : "opacity-50"}
+        />
       </div>
       <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute w-full md:h-full h-auto"/>
       <div className={`

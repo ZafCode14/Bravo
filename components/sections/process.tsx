@@ -16,14 +16,14 @@ function Process() {
 
   const handleNext = () => {
     setSectionNumber(prev => {
-      const nextSection = prev === 4 ? 1 : prev + 1;
+      const nextSection = prev === 5 ? 1 : prev + 1;
       return nextSection;
     });
   };
 
   const handlePrev = () => {
     setSectionNumber(prev => {
-      const prevSection = prev === 1 ? 4 : prev - 1;
+      const prevSection = prev === 1 ? 5 : prev - 1;
       return prevSection;
     });
   };
@@ -68,6 +68,14 @@ function Process() {
           width="w-[219px] md:w-[350px] md:w-[450px]"
           background={`lg:bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 4 && "hidden"}`}
           section={4}
+        />
+        <Section 
+          title={t('title5')} 
+          text={t('text5')}
+          image={p === "/" ? "/images/photo9.png" : "/images/ar_photo9.png"}
+          width="w-[300px] md:w-[600px]"
+          background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 5 && "hidden"}`}
+          section={5}
         />
         <div className={`
           absolute bottom-[250px] 
