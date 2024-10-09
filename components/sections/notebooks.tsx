@@ -7,9 +7,42 @@ function Notebooks() {
   const t = useTranslations('Textbooks')
 
   return (
-    <section className="z-10 relative bg-[#EDEDED] flex flex-col items-center">
+    <section className="z-10 relative bg-[#EDEDED] flex flex-col items-center px-5">
       <p className="font-bold py-5 md:text-[26px] lg:my-10">{t('title')}</p>
-      <Image alt="textbook image" src={width <= 1024 ? '/images/textbooks.jpg' : '/images/textbooksRow.png'} height={"2000"} width={"1000"} className="w-[375px] max-w-[95%] h-auto md:w-[500px] lg:w-[1350px]"/>
+
+      <div className={`
+        bg-[white] w-[1400px] max-w-full flex flex-wrap justify-center py-10
+      `}>
+        <Image 
+          alt="textbook image" 
+          src={'/images/textbook1.png'} 
+          height={"2000"} 
+          width={"1000"} 
+          className="h-full w-[48%] sm:w-[250px] md:w-[320px] lg:w-[23%] max-w-full object-contain py-5"
+        />
+        <Image 
+          alt="textbook image" 
+          src={'/images/textbook2.png'} 
+          height={"2000"} 
+          width={"1000"} 
+          className="h-full w-[48%] sm:w-[250px] md:w-[320px] lg:w-[23%] max-w-full object-contain mx-[2%] py-5"
+        />
+        <Image 
+          alt="textbook image" 
+          src={'/images/textbook3.png'} 
+          height={"2000"} 
+          width={"1000"} 
+          className="h-full w-[48%] sm:w-[250px] md:w-[320px] lg:w-[23%] max-w-full object-contain py-5"
+        />
+        <Image 
+          alt="textbook image" 
+          src={'/images/textbook4.png'} 
+          height={"2000"} 
+          width={"1000"} 
+          className="h-full w-[48%] sm:w-[250px] md:w-[320px] lg:w-[23%] max-w-full object-contain py-5 ml-[2%]"
+        />
+      </div>
+
       <button className="text-[12px] w-[156px] h-[41px] bg-[#F69729] text-white my-5 md:w-[250px] md:h-[65px] md:text-[20px] lg:my-12">{t('button')}</button>
     </section>
   );
