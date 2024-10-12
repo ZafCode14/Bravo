@@ -7,14 +7,12 @@ function Language() {
   const [isFirstLoad, setIsFirstLoad] = useState(false);
   const height = useWindowHeight();
   const router = useRouter();
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
 
   useEffect(() => {
-    // Check if the Language component has been shown before
-    // localStorage.clear();
     const hasVisited = localStorage.getItem("hasVisited");
 
     if (!hasVisited) {
-      // If not, set isFirstLoad to true and save the state in localStorage
       setIsFirstLoad(true);
       localStorage.setItem("hasVisited", "true");
     }
@@ -22,35 +20,43 @@ function Language() {
 
   useEffect(() => {
     if (isFirstLoad) {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [height])
+  }, [height]);
 
   const handleLanguageChange = (lang: string) => {
-    // Construct the new pathname with the selected language
     const newPathname = `/${lang}`;
     setIsFirstLoad(false);
-    
-    // Update the URL with the new locale
     router.replace(newPathname);
   };
 
+  const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedLang = event.target.value;
+    setSelectedLanguage(selectedLang);
+    handleLanguageChange(selectedLang);
+  };
 
   if (!isFirstLoad) {
-    return null; // Don't render the component if it's not the first load
+    return null;
   }
 
   return (
     <div className={"w-full h-screen bg-black/50 fixed z-30 backdrop-blur-sm flex items-center justify-center"}>
       <div className="bg-white p-6 md:p-10 rounded-lg text-center w-[600px] max-w-[90%] md:text-[20px] flex flex-col items-center justify-center">
         <p className="mb-4 md:text-[20px]">Please choose your preferred language</p>
-        <p className="mb-4 md:text-[20px]">اختر اللغة اللتي تريدها</p>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded mb-5 w-[160px]" onClick={() => handleLanguageChange("en")}>English</button>
-        <button className="bg-green-500 text-white px-4 py-2 rounded w-[160px]" onClick={() => handleLanguageChange("ar")}>اللغة العربية</button>
+
+        <select
+          value={selectedLanguage}
+          onChange={handleDropdownChange}
+          className="bg-white border border-gray-300 px-4 py-2 rounded mb-5 w-[160px] text-center"
+        >
+          <option value="en">English</option>
+          <option value="ar">اللغة العربية</option>
+          <option value="fr">Français</option>
+        </select>
       </div>
     </div>
-
   );
 }
 

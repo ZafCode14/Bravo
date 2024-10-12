@@ -77,7 +77,7 @@ function HowItWorks() {
       </div>
       <div className={`
         absolute
-        lg:left-0 lg:top-[205px] ${p === "/" ? "left-[15%]" : "right-[15%]"}
+        lg:left-0 lg:top-[205px] ${p === "/ar" ? "right-[15%]" : "left-[15%]"}
         flex flex-col justify-end lg:flex-row ${p === '/ar' && "lg:justify-start"}
         h-[580px] w-[50px] md:w-[60px] md:h-[790px] lg:w-full lg:h-[60px]
       `}>

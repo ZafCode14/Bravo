@@ -1,0 +1,67 @@
+{
+  "Hero": {
+    "titlePart1": "Plus qu'une simple application de scanner.",
+    "titlePart2": "Restez efficace, connecté et pratique.",
+    "text": "Bravo Link est une application de scanner tout-en-un gratuite qui vous offre plusieurs autres fonctionnalités pour vous aider à rester efficace et connecté à votre équipe. Elle vous permet de gérer vos notes scannées depuis les carnets Bravo ainsi que de gérer tous vos documents et de les sauvegarder en un seul endroit."
+  },
+  "Download": {
+    "text1": "Téléchargez notre application maintenant !",
+    "text2": "C'est gratuit !",
+    "forAndroid": "pour Android",
+    "forIOS": "pour IOS"
+  },
+  "HowItWorks": {
+    "title": "Comment ça marche ?",
+    "step1": "Achetez notre carnet et téléchargez l'application.",
+    "step2": "Commencez à écrire des notes dans votre carnet.",
+    "step3": "Scannez vos notes avec notre application.",
+    "step4": "Créez vos carnets et organisez vos notes scannées !",
+    "step5": "Partagez facilement vos notes scannées et vos fiches avec vos coéquipiers et collègues.",
+    "box": "Achetez notre carnet et commencez à scanner, organiser et partager toutes vos notes et fiches..."
+  },
+  "BuyBravo": {
+    "title": "Achetez notre carnet intelligent Bravo pour",
+    "v1": "scanner",
+    "v2": "prendre des notes",
+    "v3": "créer des fiches",
+    "subTitle": "Ils forment le duo parfait !",
+    "text1": "Notre carnet intelligent Bravo a été conçu pour fonctionner parfaitement avec notre application Bravo Link ! Il vous permet de numériser le carnet et de l'avoir non seulement physiquement mais aussi numériquement sur vos appareils.",
+    "text2": "L'appareil photo détecte notre code QR unique pour l'authentification du carnet.",
+    "question": "Pourquoi télécharger Bravo Link ?",
+    "text3": "Nos principales fonctionnalités"
+  },
+  "Ai": {
+    "title": "Téléchargez notre application et accédez gratuitement à notre",
+    "titleBold": "outil Gemini AI",
+    "text11": "Service client",
+    "text12": "amélioré",
+    "text21": "Expérience client",
+    "text22": "améliorée",
+    "text31": "Efficacité et productivité",
+    "text32": "augmentées"
+  },
+  "Process": {
+    "title1": "Synchronisez les calendriers avec vos coéquipiers",
+    "text1": "Bravo Link vous permet de synchroniser les calendriers, de partager et de déléguer des tâches avec vos collègues et coéquipiers pour suivre les progrès et travailler sur des projets d'équipe.",
+    "title2": "Scannez des documents, notes et fiches",
+    "text2": "Grâce à une technologie de numérisation avancée, notre appareil photo de scanner numérise vos notes écrites avec la plus haute qualité et vous permet non seulement de les enregistrer en tant que notes, mais aussi de créer des fiches ! Pour faciliter l'utilisation, vous pouvez créer des carnets numériques pour sauvegarder et trier vos notes et fiches scannées.",
+    "title3": "Créez des fiches",
+    "text3": "Nos carnets intelligents Bravo sont conçus pour vous permettre de créer des fiches à partir des notes déjà prises. Vous sélectionnez simplement les phrases que vous souhaitez inclure dans les fiches, et notre technologie intelligente crée automatiquement la fiche pour vous !",
+    "title4": "Envoyez et recevez tous vos fichiers facilement",
+    "text4": "Partagez toutes vos notes, documents et fiches scannées en interne avec l'identifiant Bravo Link, qui est un identifiant unique pour chaque utilisateur.",
+    "title5": "Gemini AI au bout de vos doigts !",
+    "text5": "La fonctionnalité Gemini AI de Bravo vous permet d'explorer et de profiter de tous les avantages de la technologie en un seul clic !"
+  },
+  "Video": {
+    "title": "Simple, efficace et rapide",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "Textbooks": {
+    "title": "Achetez notre carnet intelligent pour profiter de notre application !",
+    "button": "Acheter maintenant"
+  },
+  "Footer": {
+    "follow": "Suivez-nous",
+    "text": "Téléchargez notre application et profitez de la nouvelle expérience"
+  }
+}

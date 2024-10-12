@@ -18,9 +18,10 @@ function Ai() {
         w-[1200px] max-w-full
       `}>
         {
-          p === '/' ? 
-          <h1 className="text-[#CADB4A] text-[16px] font-normal text-center mt-4 relative z-10 md:text-[30px] md:mt-10">{t('title')} <br/><b>{t('titleBold')}</b></h1> :
+          p === '/ar' ? 
           <h1 className="text-white text-[16px] font-normal text-center mt-4 relative z-10 md:text-[30px] md:mt-10">{t('title1')} <br/><b className="text-[#CADB4A]">{t('title2')}</b> {t('title3')}</h1>
+          :
+          <h1 className="text-[#CADB4A] text-[16px] font-normal text-center mt-4 relative z-10 md:text-[30px] md:mt-10">{t('title')} <br/><b>{t('titleBold')}</b></h1> 
         }
         <div className={`
           absolute
@@ -43,9 +44,10 @@ function Ai() {
             md:w-[220px] md:leading-[24px]
           `}>
             {
-              p === '/' ?
-              <p className="md:text-[24px]">{t('text11')} <br/> {t('text12')}</p> :
+              p === '/ar' ?
               <p className="py-2 md:text-[24px]">{t('text1')}</p>
+              :
+              <p className="md:text-[24px]">{t('text11')} <br/> {t('text12')}</p> 
             }
           </div>
           <div className={`
@@ -56,9 +58,10 @@ function Ai() {
             md:w-[250px] md:leading-[24px]
           `}>
           {
-            p === '/' ?
-            <p className="md:text-[24px]">{t('text21')} <br/> {t('text22')}</p> :
+            p === '/ar' ?
             <p className="py-2 md:text-[24px]">{t('text2')}</p>
+            :
+            <p className="md:text-[24px]">{t('text21')} <br/> {t('text22')}</p> 
           }
         </div>
         <div className={`
@@ -69,9 +72,10 @@ function Ai() {
           md:w-[280px] md:leading-[24px]
         `}>
           {
-            p === '/' ?
-            <p className="md:text-[24px]">{t('text31')} <br/> {t('text32')}</p> :
+            p === '/ar' ?
             <p className="py-2 md:text-[24px]">{t('text3')}</p>
+            :
+            <p className="md:text-[24px]">{t('text31')} <br/> {t('text32')}</p> 
           }
         </div>
       </div>
