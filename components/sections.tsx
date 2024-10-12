@@ -51,7 +51,7 @@ function Section({ title, text, image, width, background, section }: sectionProp
         flex flex-col items-center xl:flex-row ${section % 2 === 0 && "xl:flex-row-reverse"}
         h-full z-20
       `}>
-        <div className={`flex flex-col items-center xl:relative ${p === "/" ? "xl:items-start" : "xl:items-end"} ${section === 1 && "top-[-120px] right-[20px]"} ${section === 2 && "top-[-100px]"} ${section === 3 && "right-[40px] top-[-100px]"} ${section === 4 && "left-[40px] top-[-70px]"} ${section === 5 && "left-[0px] top-[-50px]"}`}>
+        <div className={`flex flex-col items-center xl:relative ${p === "/ar" ? "xl:items-end" : "xl:items-start"} ${section === 1 && "top-[-120px] right-[20px]"} ${section === 2 && "top-[-100px]"} ${section === 3 && "right-[40px] top-[-100px]"} ${section === 4 && "left-[40px] top-[-70px]"} ${section === 5 && "left-[0px] top-[-50px]"}`}>
           <p className={`font-bold md:text-[20px]`}>{title}</p>
           <p className={`text-[10px] w-[329px] max-w-full text-center my-5 md:text-[16px] md:w-[600px] ${p === "/ar" ? "xl:text-right" : "xl:text-left"}`}>{text}</p>
         </div>
