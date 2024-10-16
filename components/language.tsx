@@ -34,7 +34,10 @@ function Language() {
   const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedLang = event.target.value;
     setSelectedLanguage(selectedLang);
-    handleLanguageChange(selectedLang);
+  };
+
+  const handleConfirm = () => {
+    handleLanguageChange(selectedLanguage);
   };
 
   if (!isFirstLoad) {
@@ -55,6 +58,13 @@ function Language() {
           <option value="ar">اللغة العربية</option>
           <option value="fr">Français</option>
         </select>
+
+        <button
+          onClick={handleConfirm}
+          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md mt-4"
+        >
+          Confirm
+        </button>
       </div>
     </div>
   );
