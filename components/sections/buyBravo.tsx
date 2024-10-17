@@ -59,11 +59,8 @@ function BuyBravo() {
           src={`/images${p}/phone1.png`} 
           height={"2000"} 
           width={"1000"} 
-          className="
-          absolute top-[80px] right-[220px] w-[133px] h-auto 
-          md:w-[200px] md:top-[140px] md:right-[400px]
-          lg:w-[400px] lg:right-[700px] lg:top-[200px]"/>
-        <div className={`${p === '/ar' && "text-right flex-row-reverse"} w-[327px] max-w-full h-[54px] bg-[#CADB4A] flex items-center absolute top-0 md:w-[600px] md:h-[90px] lg:w-[926px] lg:h-[152px]`}>
+          className="absolute top-[80px] right-[220px] w-[133px] h-auto md:w-[200px] md:top-[140px] md:right-[400px] lg:w-[400px] lg:right-[700px] lg:top-[200px]"/>
+          <div className={`${p === '/ar' && "text-right flex-row-reverse"} w-[327px] max-w-full h-[54px] bg-[#CADB4A] flex items-center absolute top-0 md:w-[600px] md:h-[90px] lg:w-[926px] lg:h-[152px]`}>
           <p className={`${p === '/ar' ? "mr-10" : "ml-4 lg:ml-10"} text-[10px] md:text-[20px] text-white lg:text-[30px]`}>{t('title')} {string}</p>
           <div className={`bg-[white] w-[1px] h-[16px] ${p === '/ar' ? "mr-[2px]" : "ml-[2px]"} md:h-[51px] md:w-[2px]`}></div>
         </div>
@@ -90,7 +87,7 @@ function BuyBravo() {
           src={`/images${p}/phone2.png`} 
           height={"2000"} 
           width={"1000"} 
-          className="absolute top-[80px] left-[240px] w-[133px] h-auto md:w-[240px] md:left-[400px] md:top-[140px] lg:w-[470px] lg:top-[250px] lg:left-[750px]"
+          className="absolute top-[80px] left-[240px] w-[133px] h-auto md:w-[220px] md:left-[400px] md:top-[140px] lg:w-[420px] lg:top-[250px] lg:left-[750px]"
         />
         <Image alt="arrow" src={'/images/curlyarrow.svg'} height={"2000"} width={"1000"} className="absolute top-[290px] left-[30px] w-[84px] h-auto md:top-[500px] md:left-[180px] lg:w-[160px] lg:top-[950px]"/>
       </div>
