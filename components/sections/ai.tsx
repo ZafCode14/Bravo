@@ -33,7 +33,7 @@ function Ai() {
             alt="background image"
             width={2000}
             height={2000}
-            className="md:h-[90%] md:w-auto"
+            className="h-[90%] w-auto object-contain"
           />
         </div>
           <div className={`

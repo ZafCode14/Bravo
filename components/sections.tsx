@@ -45,7 +45,13 @@ function Section({ title, text, image, width, background, section }: sectionProp
           opacity={section === 5 ? "opacity-100" : "opacity-50"}
         />
       </div>
-      <Image alt="graphical image" src={'/images/graphicalEl.svg'} height={"2000"} width={"1000"} className="absolute w-full md:h-full h-auto"/>
+      <Image 
+        alt="graphical image" 
+        src={'/images/graphicalEl.svg'} 
+        height={"2000"} 
+        width={"1000"} 
+        className="absolute w-full md:h-full h-auto"
+      />
       <div className={`
         relative
         flex flex-col items-center xl:flex-row ${section % 2 === 0 && "xl:flex-row-reverse"}
@@ -55,7 +61,14 @@ function Section({ title, text, image, width, background, section }: sectionProp
           <p className={`font-bold md:text-[20px]`}>{title}</p>
           <p className={`text-[10px] w-[329px] max-w-full text-center my-5 md:text-[16px] md:w-[600px] ${p === "/ar" ? "xl:text-right" : "xl:text-left"}`}>{text}</p>
         </div>
-        <Image alt="phone image" src={image} height={"2000"} width={"2000"} priority className={`${width} h-auto z-10`}/>
+        <Image 
+          alt="phone image" 
+          src={image} 
+          height={"2000"} 
+          width={"2000"} 
+          priority 
+          className={`${width} h-auto z-10`}
+        />
       </div>
     </div>
   );

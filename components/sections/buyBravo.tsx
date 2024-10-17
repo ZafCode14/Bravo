@@ -56,7 +56,7 @@ function BuyBravo() {
           className="absolute top-[0] right-0 w-[285px] h-auto md:w-[500px] lg:w-[800px]"/>
         <Image 
           alt="phone image" 
-          src={p === '/ar' ? '/images/ar_phone1.png' : '/images/phone1.png'} 
+          src={`/images${p}/phone1.png`} 
           height={"2000"} 
           width={"1000"} 
           className="
@@ -87,7 +87,7 @@ function BuyBravo() {
         />
         <Image 
           alt="phone image" 
-          src={p === '/ar' ? '/images/ar_phone2.png' : '/images/phone2.png'} 
+          src={`/images${p}/phone2.png`} 
           height={"2000"} 
           width={"1000"} 
           className="absolute top-[80px] left-[240px] w-[133px] h-auto md:w-[240px] md:left-[400px] md:top-[140px] lg:w-[470px] lg:top-[250px] lg:left-[750px]"

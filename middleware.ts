@@ -8,7 +8,7 @@ export default createMiddleware({
 
   // Determines when the locale prefix (e.g., /en, /fr) should be used in the URL
   // 'as-needed' means the prefix is added only when needed, such as when there is more than one locale
-  localePrefix,
+  localePrefix: 'always',
 
   // The default locale to fall back to if no matching locale is found
   // This is the primary language of your application, typically 'en' for English

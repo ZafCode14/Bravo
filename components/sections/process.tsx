@@ -39,7 +39,7 @@ function Process() {
         <Section 
           title={t('title1')} 
           text={t('text1')}
-          image={p === '/ar' ? `/images/ar_group4.png` : `${width < 1024 ? "/images/group4.png" : "/images/group4L.png"}`}
+          image={`/images${p}/group1.png`}
           width="w-[329px] md:w-[500px] lg:w-[550px]"
           background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 1 && "hidden"}`}
           section={1}
@@ -48,7 +48,7 @@ function Process() {
         <Section 
           title={t('title2')} 
           text={t('text2')}
-          image={p === "/ar" ? "/images/ar_photo6.png" : "/images/photo6.png"}
+          image={`/images${p}/group2.png`}
           width="w-[308px] md:w-[450px] lg:w-[550px]"
           background={`lg:bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 2 && "hidden"}`}
           section={2}
@@ -56,7 +56,7 @@ function Process() {
         <Section 
           title={t('title3')} 
           text={t('text3')}
-          image={p === "/ar" ? `/images/ar_photo7.png` : `${width < 1024 ? "/images/photo7.png" : "/images/photo7L.png"}`}
+          image={`/images${p}/group3.png`}
           width={`${p === "/" ? "w-[329px]" : "w-[270px]"} md:w-[430px]`}
           background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 3 && "hidden"}`}
           section={3}
@@ -64,7 +64,7 @@ function Process() {
         <Section 
           title={t('title4')} 
           text={t('text4')}
-          image={p === "/ar" ? "/images/ar_photo8.png" : "/images/photo8.png"}
+          image={`/images${p}/group4.png`}
           width="w-[219px] md:w-[350px] md:w-[450px]"
           background={`lg:bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 4 && "hidden"}`}
           section={4}
@@ -72,7 +72,7 @@ function Process() {
         <Section 
           title={t('title5')} 
           text={t('text5')}
-          image={p === "/ar" ? "/images/ar_photo9.png" : "/images/photo9.png"}
+          image={`/images${p}/group5.png`}
           width="w-[300px] md:w-[600px]"
           background={`bg-[#EDEDED] ${width >= 1024 && sectionNumber !== 5 && "hidden"}`}
           section={5}
